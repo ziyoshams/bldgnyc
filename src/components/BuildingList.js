@@ -9,7 +9,9 @@ class BuildingList extends Component {
 
   fetchList = async () => {
     try {
-      const response = await axios.get('building_list.json');
+      const response = await axios.get(
+        'https://raw.githubusercontent.com/antonholmes/bldgnyc/master/building_list'
+      );
       console.log(response);
     } catch (err) {
       console.log(err);
