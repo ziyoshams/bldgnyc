@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import axios from 'axios';
+import BuildingDetail from './BuildingDetail';
 
 class BuildingList extends Component {
   state = { buildings: [] };
@@ -14,11 +15,13 @@ class BuildingList extends Component {
       .get(
         'https://raw.githubusercontent.com/antonholmes/bldgnyc/master/api/building_list'
       )
-      .then(response => this.setState({ albums: response.data }));
+      .then(response => this.setState({ buildings: response.data }));
   }
 
   renderBuildings() {
-    this.state.buildings.map(building => <Text>{building.name}</Text>);
+    return this.state.buildings.map(building => (
+      <BuildingDetail key={building.name} building={building} />
+    ));
   }
 
   // fetchList = async () => {
