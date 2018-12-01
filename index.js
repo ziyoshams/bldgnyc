@@ -4,7 +4,7 @@ import Header from './src/components/header';
 import BuildingList from './src/components/BuildingList';
 
 const App = () => (
-  <View>
+  <View style={{ flex: 1 }}>
     <Header headerText={'Asset'} />
     <BuildingList />
   </View>

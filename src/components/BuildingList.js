@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import axios from 'axios';
 import BuildingDetail from './BuildingDetail';
 
@@ -37,7 +37,7 @@ class BuildingList extends Component {
 
   render() {
     console.log(this.state);
-    return <View>{this.renderBuildings()}</View>;
+    return <ScrollView>{this.renderBuildings()}</ScrollView>;
   }
 }
 
