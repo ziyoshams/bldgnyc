@@ -13,8 +13,7 @@ const styles = {
     justifyContent: 'flex-start',
     flexDirection: 'row',
     borderColor: '#ddd',
-    position: 'relative',
-  },
+  }
 };
 
 export default CardSection;

@@ -4,12 +4,12 @@ import Card from './Card';
 import CardSection from './CardSection';
 
 const BuildingDetail = ({ building }) => {
-  const { name, location, thumbnail }
+  const { name, location, thumbnail } = building;
   return (
     <Card>
       <CardSection>
-        <View>
-          <Image source={{ uri: thumbnail }} />
+        <View style={{ width: 50, height: 50, margin: 4 }}>
+          <Image styles={{ width: 50, height: 50 }} source={{ uri: thumbnail }} />
         </View>
         <View style={styles.headerContentStyle}>
           <Text>{name}</Text>
@@ -23,8 +23,8 @@ const BuildingDetail = ({ building }) => {
 const styles = {
   headerContentStyle: {
     flexDirection: 'column',
-    justifyContent: 'space-around',
-  },
+    justifyContent: 'space-around'
+  }
 };
 
 export default BuildingDetail;
