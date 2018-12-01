@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, ScrollView, FlatList, Text, Dimensions } from 'react-native';
+import { View, ScrollView, FlatList, Text } from 'react-native';
+
 import axios from 'axios';
 import BuildingDetail from './BuildingDetail';
 
